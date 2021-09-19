@@ -1,0 +1,365 @@
+/* sidebar menu */
+.wrapper {
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+  word-wrap: normal;
+}
+
+#sidebar {
+  max-width: 250px;
+  min-height: 315vh;
+  min-width: 250px;
+}
+
+/* We are using standard Bootstrap 4 class .dropdown-toggle. */
+#sidebar .active {
+  margin-left: -250px;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* need slightly different behavior for the sidebar on the smaller screens.
+Instead of appearing by default, it'll be hidden and appear only after clicking the toggle button. */
+/* further styling */
+.card {
+  padding: 0;
+}
+
+p, .tc {
+  font-family: sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  background-color: red;
+  /* Create the gradient. */
+  background-image: linear-gradient(0.15turn, #ff8c00, #00008b);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#sidebar {
+  /* don't forget to add all the previously mentioned styles here too */
+  background: silver;
+  color: white;
+  transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #242424;
+}
+
+.menu-heading {
+  padding-top: 1rem;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #138496;
+  background: #fff;
+}
+
+#sidebar ul li.active>a, a[aria-expanded="true"] {
+  color: #fff;
+  background: #138496;
+}
+
+
+/* applying animation to body */
+/* sidebar done */
+body {
+  background-color: #0B0613;
+  color: white;
+  position: relative;
+  animation: mymove 5s infinite;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+
+@keyframes mymove {
+  from {top: -100px;}
+  to {top: 0px;}
+}
+
+footer {
+  /* position: absolute;
+  bottom: 0;
+  right: 85vh; */
+  bottom: 0;
+  color: silver;
+  left: 36rem;
+  position: relative;
+}
+
+.doc_heading {
+  display: block;
+  margin-bottom: 5rem;
+  /* padding-left: 8rem; */
+  text-align: center;
+  text-decoration: underline;
+}
+
+.doc_heading img {
+  height: 4rem;
+  padding: 1rem;
+}
+
+article {
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+  text-align: left;
+}
+
+hr {
+  background-color: silver;
+  /* margin-top: 2rem; */
+  margin-bottom: 2rem;
+  /* width: 1rem; */
+}
+
+article a:hover {
+  color: #138496;
+}
+
+.back_top {
+  cursor: alias;
+  left: 45rem;
+  position: relative;
+}
+
+/* Sign-in Page */
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 85%;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+  background-color: #39ace7;
+}
+
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+input[type=text],input[type=email],input[type=password]{
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
+
+input[type=text]:placeholder {
+  color: #cccccc;
+}
+
+#formFooter {
+
+  border-top: 1px solid #dce8f1;
+  bottom: 28rem;
+  position: relative;
+  padding: 25px;
+  right: 2rem;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.bg-img{
+  background-image: url("https://media.gqindia.com/wp-content/uploads/2019/11/top-image19-1920x1080.jpg");
+  filter: blur(8px);
+ -webkit-filter: blur(8px);
+ width: 75rem;
+  padding: 20rem;
+}
+
+.log_form{
+  bottom: 30rem;
+  left: 15rem;
+  position: relative;
+  width: 60%;
+}
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #56baed;
+  content: "";
+  transition: width 0.2s;
+}
+
+.underlineHover:hover {
+  color: cyan;
+}
+
+.underlineHover:hover:after{
+  width: 100%;
+}
+
+
+/* pricing page */
+section.pricing {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.pricing .card {
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.pricing hr {
+  margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+}
+
+.pricing .card-price {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.pricing .card-price .period {
+  font-size: 0.8rem;
+}
+
+.pricing ul li {
+  margin-bottom: 1rem;
+}
+
+.pricing .text-muted {
+  opacity: 0.7;
+}
+
+.pricing .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+}
+
+.pricing-plans li{
+  color: black;
+}
+
+.pricing-plans h6.card-price.text-center {
+    color: black;
+}
+
+
+/* Movies */
+.card{
+  margin: 1rem;
+  display: inline-block;
+}
+
+.card-img-top{
+  height: 185px;
+  width: 286px;
+}
